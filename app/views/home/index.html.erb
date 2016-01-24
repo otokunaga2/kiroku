@@ -8,4 +8,18 @@ Logged in as <strong><%= current_user.email %></strong>.
 <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
 <% end %>
 
-
+<div class="page-header">
+  <h1>ドキュメント一覧
+  </h1>
+  <div class="list-group">
+  <% if user_signed_in? %> 
+    <% current_user.documents.each do |document| %>
+      <%= link_to(document, class: 'list-group-item') do %>
+        <h4 class="list-group-item-heading">
+          <%= document.name %>
+        </h4>
+      <% end %>
+    <% end %>
+  <% end %>
+  </div>
+</div>
