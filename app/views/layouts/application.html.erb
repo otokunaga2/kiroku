@@ -11,6 +11,11 @@
   <div class="container">
     <div class="navbar-header">
      <%= link_to 'Kiroku', root_path, class: 'navbar-brand' %>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nab navbar-right">
+       <li><%= link_to 'イベントを作る', new_document_path %></li>
+       <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "navbar-link" %></li>
+    </div>
     </div>
   </div>
 </header>

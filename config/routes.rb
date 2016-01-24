@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
-
+  get '/logout' => 'sessions#destroy', as: :logout
   root 'home#index'
-
+  resources :tags
+  resources :documents
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
