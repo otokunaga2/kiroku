@@ -16,7 +16,7 @@ class DocumentsController < ApplicationController
     @document = current_user.documents.find(params[:id])
   end
   def show
-    @document = Document.find(params[:id])
+    @document = current_user.documents.find(params[:id])
   end
   def destroy
     @document = current_user.documents.find(params[:id])

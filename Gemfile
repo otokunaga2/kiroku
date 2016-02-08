@@ -13,6 +13,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-dropbox-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'nested_form'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -24,7 +30,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'devise'
 
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
@@ -42,6 +47,10 @@ group :development do
   gem 'byebug'
 
   gem 'pry'
+  gem 'better_errors'
+
+     # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   #gem 'rails-erd' #ER図の記述を支援

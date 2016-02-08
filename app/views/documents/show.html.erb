@@ -11,6 +11,13 @@
   <div class="panel-body">
     <%= @document.name %>
   </div>
+  <% if @document.tags.any? %>
+    <% @document.tags.each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
+  <% else %>
+    <li>no tags</li>
+  <% end %>
 </div>
 
 <div class="panel panel-default">

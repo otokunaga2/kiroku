@@ -8,12 +8,12 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '2ada4c4b27c46b940bd357900868929aebedaeb1dab3d9310b915f736e4a7548a4560c379930845be8f8de92d59d8d571193ac195e22ee8ad63d5b6165949c8c'
 
+  config.secret_key = 'cf1f7c370b0a33078b517b02c3c854394fbae76365d1ada533339a06e8c7cf4f3bbd710c520c96522b8a2f7107d61e60085773f3d02d1b81e42f7fed467ba85f'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -22,7 +22,9 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
-
+  #config.omniauth :dropbox,
+  #Rails.application.secrets.dropbox.app_id,
+  #Rails.application.secrets.dropbox.app_secret
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
