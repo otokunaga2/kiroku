@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+  <div class="col-md-3">
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
@@ -26,3 +28,5 @@
   </div>
   <%= f.submit '作成', class: 'btn btn-default', data: {disable_with: '作成中...'} %>
 <% end %>
+   </div>
+   </div>
