@@ -26,7 +26,8 @@ class DocumentsController < ApplicationController
   private 
   def document_params
     params.require(:document).permit(
-      :name, :url, :body
+      :name, :url, :body,
+      tags_attributes: [:id,:created_at, :updated_at]
     ) 
   end
 end
